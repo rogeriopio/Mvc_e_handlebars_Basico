@@ -1,6 +1,6 @@
 import express from 'express';
 import { TaskController } from '../controllers/TaskController.js';
-export const routerTeste = express.Router();
+export const router = express.Router();
 
-routerTeste.get('/add', TaskController.createTask);
-routerTeste.get('/', TaskController.showTasks);
+router.get('/add', TaskController.createTask);
+router.get('/', TaskController.showTasks);
