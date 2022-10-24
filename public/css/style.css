@@ -91,6 +91,7 @@ form input[type='submit'] {
 
 .actions {
 	display: flex;
+	align-items: center;
 }
 
 .actions i:hover {
@@ -110,6 +111,11 @@ form input[type='submit'] {
 
 .actions button i {
 	font-size: 1.5em;
+	margin-right: 0.6em;
+	color: #333;
+}
+.buttons-icons {
+	font-size: 1.25em;
 	margin-right: 0.6em;
 	color: #333;
 }

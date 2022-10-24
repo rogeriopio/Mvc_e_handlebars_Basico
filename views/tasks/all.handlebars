@@ -18,12 +18,9 @@
 						<i class='fa-solid fa-square-minus'></i>
 					</button>
 				</form>
-				<form action='/tasks/edit' method='post'>
-					<input type='hidden' name='id' value='{{this.id}}' />
-					<button type='submit'>
-						<i class='fa fa-square-pen'></i>
-					</button>
-				</form>
+				<a href='/tasks/edit/{{this.id}}'>
+					<i class='fa fa-square-pen buttons-icons'></i>
+				</a>
 			</div>
 		</li>
 	</ul>
