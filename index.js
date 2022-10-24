@@ -20,6 +20,7 @@ app.use(express.json());
 app.use(express.static('public'));
 
 app.use('/tasks', tasksRoutes);
+app.use('/', tasksRoutes);
 
 conn.sync()
 	.then(() => app.listen(port))
