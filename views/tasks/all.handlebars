@@ -2,14 +2,27 @@
 
 {{#each tasks}}
 	<ul class='task-list'>
-		<li><a href='/' class='title'>{{this.title}}</a>
+		<li>
+			{{#if this.done}}
+				<a href='/' class='title done green'>{{this.title}}</a>
+			{{else}}
+				<a href='/' class='title'>{{this.title}}</a>
+			{{/if}}
 			<div class='actions'>
 				<a href='/'></a>
-				<form action='/tasks/check' method='post'>
+				<form action='/tasks/checkstatus' method='post'>
 					<input type='hidden' name='id' value='{{this.id}}' />
+					<input type='hidden' name='done' value='{{this.done}}' />
+
 					<button type='submit'>
-						<i class='fa-solid fa-square-check green'></i>
+						{{#if this.done}}
+							<i class='fa-solid fa-square-check green'></i>
+						{{else}}
+							<i class='fa-solid fa-square-check'></i>
+
+						{{/if}}
 					</button>
+
 				</form>
 				<form action='/tasks/remove' method='post'>
 					<input type='hidden' name='id' value='{{this.id}}' />
@@ -18,9 +31,11 @@
 						<i class='fa-solid fa-square-minus'></i>
 					</button>
 				</form>
+
 				<a href='/tasks/edit/{{this.id}}'>
 					<i class='fa fa-square-pen buttons-icons'></i>
 				</a>
+
 			</div>
 		</li>
 	</ul>

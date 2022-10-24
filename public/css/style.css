@@ -119,3 +119,8 @@ form input[type='submit'] {
 	margin-right: 0.6em;
 	color: #333;
 }
+.title.done,
+.actions button i.green {
+	text-decoration: line-through;
+	color: #ccc;
+}
