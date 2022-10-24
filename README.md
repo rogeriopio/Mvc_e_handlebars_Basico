@@ -1,6 +1,6 @@
 <p align="center">
   <a href="" rel="noopener">
-  <img width="400px" height="259px"  src="./src/img/sorteador.PNG" alt="Projeto logo"></a>
+  <img width="400px" height="155px"  src="./public/image/TodoNodeJs.PNG" alt="Projeto logo"></a>
 </p>
 
 <h3 align="center">Simples aplicação de ToDo para testar a metodologia MVC e handleBars junto com Sequelize</h3>
@@ -66,7 +66,7 @@ $ npm start
 
 <p>Adicione, edita ou exclua suas tarefas</p>
 
-<img width="400px" height="357px"  src="/src/img/sorteador.gif" alt="Sorteador de números"></a>
+<img width="400px" height="231px"  src="./public/image/todoNodeJs.gif" alt="todo node"></a>
 
 ## Tecnologia Utilizada
 
