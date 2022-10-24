@@ -28,4 +28,23 @@ export class TaskController {
 		await Task.destroy({ where: { id: id } });
 		res.redirect('/tasks');
 	}
+
+	static async updateTask(req, res) {
+		const id = req.params.id;
+		console.log('id PARAMS: ', id);
+		const task = await Task.findOne({ where: { id: id }, raw: true });
+		console.log('task: ', task);
+		res.render('tasks/edit', { task });
+	}
+
+	static async updateTaskPost(req, res) {
+		const id = req.body.id;
+		console.log('idBODY: ', id);
+		const task = {
+			title: req.body.title,
+			description: req.body.description,
+		};
+		await Task.update(task, { where: { id: id } });
+		res.redirect('/tasks');
+	}
 }
