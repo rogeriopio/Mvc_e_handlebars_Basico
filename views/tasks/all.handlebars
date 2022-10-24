@@ -1,1 +1,15 @@
-<h1>todas as tasks</h1>
+<h1>Minhas Tarefas</h1>
+
+{{#each tasks}}
+	<ul class='task-list'>
+		<li><a href='/' class='title'>{{this.title}}</a>
+			<div class='actions'>
+				<a href='/'><i class=''></i></a>
+				<a href='/'><i class='fa-solid fa-square-check green'></i></a>
+				<a href='/'><i class='fa-solid fa-square-minus red'></i></a>
+				<a href='/'><i class='fa fa-square-pen blue'></i></a>
+			</div>
+		</li>
+	</ul>
+
+{{/each}}
