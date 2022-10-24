@@ -4,10 +4,26 @@
 	<ul class='task-list'>
 		<li><a href='/' class='title'>{{this.title}}</a>
 			<div class='actions'>
-				<a href='/'><i class=''></i></a>
-				<a href='/'><i class='fa-solid fa-square-check green'></i></a>
-				<a href='/'><i class='fa-solid fa-square-minus red'></i></a>
-				<a href='/'><i class='fa fa-square-pen blue'></i></a>
+				<a href='/'></a>
+				<form action='/tasks/check' method='post'>
+					<input type='hidden' name='id' value='{{this.id}}' />
+					<button type='submit'>
+						<i class='fa-solid fa-square-check green'></i>
+					</button>
+				</form>
+				<form action='/tasks/remove' method='post'>
+					<input type='hidden' name='id' value='{{this.id}}' />
+					{{! Usar botão pois consigo colocar html dentro input:submit não }}
+					<button type='submit'>
+						<i class='fa-solid fa-square-minus'></i>
+					</button>
+				</form>
+				<form action='/tasks/edit' method='post'>
+					<input type='hidden' name='id' value='{{this.id}}' />
+					<button type='submit'>
+						<i class='fa fa-square-pen'></i>
+					</button>
+				</form>
 			</div>
 		</li>
 	</ul>
